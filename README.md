@@ -8,7 +8,7 @@
 - `courses.html`：完整課程資源
 - `team.html`：顧問團隊
 - `results.html`：學員回饋
-- `enroll.html`：報名資訊與試聽表單
+- `enroll.html`：報名資訊與報名表單
 
 ## 結構
 
