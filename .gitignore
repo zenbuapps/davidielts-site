@@ -2,3 +2,5 @@
 *.zip
 reference/
 .serena/
+.wrangler/
+node_modules/
