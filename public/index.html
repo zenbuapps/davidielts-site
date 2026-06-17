@@ -6726,7 +6726,7 @@ body { background: var(--page); }
   .statc:nth-child(odd)::before { display: none; }
   .res-side { grid-auto-flow: row; }
   .finale2 .fdeco { opacity: .35; }
-  .hero-stage .deco.scribble, .hero-stage .deco.pen { display: none; }
+  .hero-stage .deco.scribble, .hero-stage .deco.pen, .hero-stage .deco.book, .hero-stage .deco.laptop { display: none; }
 }
 </style>
 
@@ -6743,13 +6743,14 @@ body { background: var(--page); }
 .hero-carousel{position:relative;z-index:4;width:100%;max-width:360px;margin:0 auto;}
 .hero-carousel .hslide{position:absolute;inset:0;opacity:0;transform:translateY(12px) scale(.98);transition:opacity .6s ease,transform .6s ease;pointer-events:none;display:flex;flex-direction:column;align-items:center;text-align:center;}
 .hero-carousel .hslide.is-active{position:relative;opacity:1;transform:none;pointer-events:auto;}
-.hphoto{width:clamp(210px,23vw,290px);height:clamp(210px,23vw,290px);border-radius:50%;overflow:hidden;border:5px solid #fff;box-shadow:0 26px 50px -22px rgba(30,58,99,.5);background:radial-gradient(120% 120% at 50% 16%,#fff,var(--wash,#D7E5F6) 78%);}
-.hphoto img{width:100%;height:100%;object-fit:cover;object-position:top center;}
-.hphoto-cut img{object-fit:contain;object-position:bottom center;width:108%;height:108%;margin:6% 0 0 -4%;}
+.hphoto{width:100%;height:clamp(250px,29vw,340px);display:flex;align-items:flex-end;justify-content:center;}
+.hphoto img{width:auto;height:100%;max-width:100%;object-fit:contain;object-position:bottom center;filter:drop-shadow(0 22px 26px rgba(30,58,99,.20));}
+.hphoto-cut img{height:118%;}
 .hname{font-family:"Caveat",cursive;font-weight:700;font-size:clamp(32px,3.4vw,42px);color:var(--mid,#3C6FB2);line-height:1;margin-top:18px;}
 .hrole{font-family:var(--f-body);font-size:13px;letter-spacing:.05em;color:var(--ink,#16233B);font-weight:700;margin-top:9px;}
-.hcreds{list-style:none;padding:0;margin:14px 0 0;display:grid;gap:6px;}
-.hcreds li{font-family:var(--f-body);font-size:13px;color:var(--txt,#46566E);line-height:1.5;}
+.hcreds{list-style:none;padding:0;margin:14px auto 0;display:inline-block;text-align:left;}
+.hcreds li{font-family:var(--f-body);font-size:13px;color:var(--txt,#46566E);line-height:1.7;padding-left:14px;position:relative;}
+.hcreds li::before{content:"";position:absolute;left:0;top:9px;width:5px;height:5px;border-radius:50%;background:var(--gold,#F1C232);}
 .hero-dots{display:flex;gap:8px;justify-content:center;margin-top:22px;position:relative;z-index:4;}
 .hero-dots button{width:9px;height:9px;border-radius:50%;background:var(--wash-2,#C5DAF1);border:none;cursor:pointer;padding:0;transition:background .2s,width .2s;}
 .hero-dots button.is-active{background:var(--blue,#2E6FD6);width:22px;border-radius:5px;}
@@ -6963,28 +6964,28 @@ body { background: var(--page); }
 <section class="stepband" id="method">
   <div class="wrap">
     <div class="head-center">
-      <h2 class="h-sec"><span class="hl">三階段</span><br>把雅思準備變成可追蹤的衝刺計畫</h2>
+      <h2 class="h-sec"><span class="hl">三階段</span><br>把雅思準備變成<br>有邏輯的高分衝刺計劃</h2>
     </div>
     <div class="step-row">
       <div class="stp">
         <div class="step-arrow"><img src="assets/50adecf4-4805-44c5-bc08-2eef74cd4ae9.png" alt="" loading="lazy"></div>
         <div class="circle">01</div>
         <div class="art"><img src="assets/e95c07ed-4733-4fb3-8750-74b702c02d86.png" alt="" loading="lazy"></div>
-        <h3>建立題型地圖</h3>
-        <p>拆解各科題型與出題邏輯，找出個人弱點與失分根源。</p>
+        <h3>建立學習地圖</h3>
+        <p>精華影片拆解各科題型與出題邏輯，搭配模考網站分類練習，找出你的弱點和失分根源。</p>
       </div>
       <div class="stp">
         <div class="step-arrow"><img src="assets/50adecf4-4805-44c5-bc08-2eef74cd4ae9.png" alt="" loading="lazy"></div>
         <div class="circle">02</div>
         <div class="art"><img src="assets/9833cd89-0338-4f8c-82c2-a263dfeaa017.png" alt="" loading="lazy"></div>
-        <h3>EVR 練習循環</h3>
-        <p>以「Evaluate 評估」→「Verify 驗證」→「Refine 優化」持續練習並針對弱點修正。</p>
+        <h3>EVR 高效練習循環</h3>
+        <p><b>Evaluate</b> 真人顧問評估 →<br><b>Verify</b> 提供實力提升計劃、解題技巧、考試策略 →<br><b>Refine</b> 模考網站和每週團體課，針對弱點修正、確認進步。</p>
       </div>
       <div class="stp">
         <div class="circle">03</div>
         <div class="art"><img src="assets/af42844e-c0ec-4e86-b645-12705e4e5e20.png" alt="" loading="lazy"></div>
-        <h3>考前模考校準</h3>
-        <p>全真模考檢測全科狀態，調整策略與節奏，衝刺最後關鍵。</p>
+        <h3>一針見血的作業批改</h3>
+        <p>Line 顧問親自回覆問題、批改作業，幫你找出盲點，不再盲目練習。</p>
       </div>
     </div>
   </div>
