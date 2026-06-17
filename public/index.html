@@ -6738,6 +6738,23 @@ body { background: var(--page); }
 .drawer-panel .drawer-acct a{flex:1;display:inline-flex;align-items:center;justify-content:center;gap:7px;border:1px solid var(--line,#E4EAF3);border-radius:12px;padding:11px 8px;font-size:14px;}
 .drawer-panel .drawer-acct svg{width:18px;height:18px;}
 </style>
+<style id="hero-carousel-css">
+.hero-stage{align-items:center;}
+.hero-carousel{position:relative;z-index:4;width:100%;max-width:360px;margin:0 auto;}
+.hero-carousel .hslide{position:absolute;inset:0;opacity:0;transform:translateY(12px) scale(.98);transition:opacity .6s ease,transform .6s ease;pointer-events:none;display:flex;flex-direction:column;align-items:center;text-align:center;}
+.hero-carousel .hslide.is-active{position:relative;opacity:1;transform:none;pointer-events:auto;}
+.hphoto{width:clamp(210px,23vw,290px);height:clamp(210px,23vw,290px);border-radius:50%;overflow:hidden;border:5px solid #fff;box-shadow:0 26px 50px -22px rgba(30,58,99,.5);background:radial-gradient(120% 120% at 50% 16%,#fff,var(--wash,#D7E5F6) 78%);}
+.hphoto img{width:100%;height:100%;object-fit:cover;object-position:top center;}
+.hphoto-cut img{object-fit:contain;object-position:bottom center;width:108%;height:108%;margin:6% 0 0 -4%;}
+.hname{font-family:"Caveat",cursive;font-weight:700;font-size:clamp(32px,3.4vw,42px);color:var(--mid,#3C6FB2);line-height:1;margin-top:18px;}
+.hrole{font-family:var(--f-body);font-size:13px;letter-spacing:.05em;color:var(--ink,#16233B);font-weight:700;margin-top:9px;}
+.hcreds{list-style:none;padding:0;margin:14px 0 0;display:grid;gap:6px;}
+.hcreds li{font-family:var(--f-body);font-size:13px;color:var(--txt,#46566E);line-height:1.5;}
+.hero-dots{display:flex;gap:8px;justify-content:center;margin-top:22px;position:relative;z-index:4;}
+.hero-dots button{width:9px;height:9px;border-radius:50%;background:var(--wash-2,#C5DAF1);border:none;cursor:pointer;padding:0;transition:background .2s,width .2s;}
+.hero-dots button.is-active{background:var(--blue,#2E6FD6);width:22px;border-radius:5px;}
+@media (max-width:760px){.hero-carousel{max-width:320px;}}
+</style>
 </head>
 <body>
 
@@ -6824,16 +6841,44 @@ body { background: var(--page); }
       <img class="deco book" src="assets/5ba92341-7fbf-4d63-bf6b-c2f0543accbc.png" alt="" loading="lazy">
       <img class="deco laptop" src="assets/09b2ec8d-cfd3-43ea-a2bb-dac4bf0eace8.png" alt="" loading="lazy">
 
-      <img class="david" src="assets/185a6520-1ab2-49b4-84d5-0e4555dd4aaf.png" alt="David Ting 雅思衝刺班創辦人" loading="eager">
-
-      <div class="signature">
-        <div class="nm">David Ting</div>
-        <div class="role"><b>Ace IELTS 創辦人</b></div>
-        <ul class="creds">
-          <li>雅思 9.0 / 9.0</li>
-          <li>資深留學考試顧問</li>
-          <li>15 年衝刺班經驗</li>
-        </ul>
+      <div class="hero-carousel" id="heroCarousel">
+        <div class="hslide is-active">
+          <div class="hphoto hphoto-cut"><img src="assets/185a6520-1ab2-49b4-84d5-0e4555dd4aaf.png" alt="David" loading="eager"></div>
+          <div class="hname">David</div>
+          <div class="hrole">Ace IELTS 協力顧問</div>
+          <ul class="hcreds">
+            <li>雅思 9.0 / 9.0（閱讀、聽力、口說 9.0）</li>
+            <li>SK2 TOEFL 共同創辦人</li>
+            <li>托福新制 6.0 / 6.0（舊制 119 / 120）</li>
+            <li>15 年衝刺班經驗</li>
+          </ul>
+        </div>
+        <div class="hslide">
+          <div class="hphoto"><img src="assets/9def3c73-839a-451f-90d5-92dcfb356213.png" alt="Rosa" loading="lazy"></div>
+          <div class="hname">Rosa</div>
+          <div class="hrole">Ace IELTS 協力顧問</div>
+          <ul class="hcreds">
+            <li>雅思 8.0 / 9.0（閱讀 9.0）</li>
+            <li>SK2 TOEFL 共同創辦人</li>
+            <li>托福新制 5.5 / 6.0（舊制 116 / 120）</li>
+            <li>15 年衝刺班經驗</li>
+          </ul>
+        </div>
+        <div class="hslide">
+          <div class="hphoto"><img src="assets/c7c61abc-09bd-4b3e-b2af-92d9871ca61a.png" alt="Pallas" loading="lazy"></div>
+          <div class="hname">Pallas</div>
+          <div class="hrole">Ace IELTS 協力顧問</div>
+          <ul class="hcreds">
+            <li>雅思 8.0 / 9.0（口說 9.0）</li>
+            <li>SK2 TOEFL 衝刺班顧問</li>
+            <li>5 年衝刺班／抱佛腳班經驗</li>
+          </ul>
+        </div>
+      </div>
+      <div class="hero-dots" id="heroDots">
+        <button class="is-active" type="button" aria-label="David"></button>
+        <button type="button" aria-label="Rosa"></button>
+        <button type="button" aria-label="Pallas"></button>
       </div>
     </div>
   </div>
@@ -7144,4 +7189,20 @@ html.lenis,html.lenis body{height:auto;}
 })();
 </script>
 <style id="cta-oneline">@media (min-width:900px){.cta-band h2,.finale2 h2,.finale h2{white-space:nowrap;font-size:clamp(24px,2.5vw,34px) !important;line-height:1.3 !important;}.cta-band .inner,.finale2 .inner,.finale .inner{max-width:920px !important;}}</style>
+<script id="hero-carousel-js">
+(function(){
+  var stage=document.getElementById('heroCarousel'); if(!stage) return;
+  var slides=[].slice.call(stage.querySelectorAll('.hslide'));
+  var dots=[].slice.call(document.querySelectorAll('#heroDots button'));
+  var i=0,timer=null,delay=4500;
+  var reduce=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  function show(n){slides[i].classList.remove('is-active');if(dots[i])dots[i].classList.remove('is-active');i=(n+slides.length)%slides.length;slides[i].classList.add('is-active');if(dots[i])dots[i].classList.add('is-active');}
+  function start(){if(reduce)return;stop();timer=setInterval(function(){show(i+1);},delay);}
+  function stop(){if(timer){clearInterval(timer);timer=null;}}
+  dots.forEach(function(d,n){d.addEventListener('click',function(){show(n);start();});});
+  stage.addEventListener('mouseenter',stop);stage.addEventListener('mouseleave',start);
+  var wrap=stage.closest('.hero-stage')||stage; wrap.addEventListener('mouseenter',stop); wrap.addEventListener('mouseleave',start);
+  start();
+})();
+</script>
 </body></html>
