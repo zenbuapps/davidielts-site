@@ -7393,6 +7393,14 @@ body { background: var(--page); }
 }
 </style>
 
+<style id="nav-icons-css">
+.nav-cta .nav-ic{display:inline-flex;align-items:center;justify-content:center;width:42px;height:42px;border-radius:12px;color:var(--ink-soft);transition:background .18s ease,color .18s ease;}
+.nav-cta .nav-ic:hover{background:var(--sky,#E4EFFA);color:var(--blue,#2E6FD6);}
+.nav-cta .nav-ic svg{width:22px;height:22px;}
+.drawer-panel .drawer-acct{display:flex;gap:10px;margin-top:4px;}
+.drawer-panel .drawer-acct a{flex:1;display:inline-flex;align-items:center;justify-content:center;gap:7px;border:1px solid var(--line,#E4EAF3);border-radius:12px;padding:11px 8px;font-size:14px;}
+.drawer-panel .drawer-acct svg{width:18px;height:18px;}
+</style>
 </head>
 <body>
 
@@ -7408,6 +7416,8 @@ body { background: var(--page); }
       <a href="enroll.html">報名資訊</a>
     </nav>
     <div class="nav-cta">
+      <a class="nav-ic" href="https://course.davidielts.com/my-account/" aria-label="我的帳號" title="我的帳號"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="8" r="4"></circle><path d="M4 21c0-4 4-6.2 8-6.2s8 2.2 8 6.2" stroke-linecap="round"></path></svg></a>
+      <a class="nav-ic" href="https://course.davidielts.com/checkout/" aria-label="購物車" title="購物車"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="9" cy="20" r="1.6"></circle><circle cx="18" cy="20" r="1.6"></circle><path d="M2 3h3l2.4 12.3a1 1 0 0 0 1 .8h9.1a1 1 0 0 0 1-.8L20.5 7H6" stroke-linecap="round" stroke-linejoin="round"></path></svg></a>
       <button class="hamburger" id="open-menu" aria-label="開啟選單">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18" stroke-linecap="round"></path></svg>
       </button>
@@ -7427,6 +7437,10 @@ body { background: var(--page); }
     <a href="about.html" data-close="">關於 David</a>
     <a href="reviews.html" data-close="">學員回饋</a>
     <a href="enroll.html" data-close="">報名資訊</a>
+    <div class="drawer-acct">
+      <a href="https://course.davidielts.com/my-account/" data-close=""><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="8" r="4"></circle><path d="M4 21c0-4 4-6.2 8-6.2s8 2.2 8 6.2" stroke-linecap="round"></path></svg>我的帳號</a>
+      <a href="https://course.davidielts.com/checkout/" data-close=""><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="9" cy="20" r="1.6"></circle><circle cx="18" cy="20" r="1.6"></circle><path d="M2 3h3l2.4 12.3a1 1 0 0 0 1 .8h9.1a1 1 0 0 0 1-.8L20.5 7H6" stroke-linecap="round" stroke-linejoin="round"></path></svg>購物車</a>
+    </div>
     <a class="btn btn-fill" href="https://lin.ee/REPLACE-ME" target="_blank" rel="noopener" data-close="">免費報名直播</a>
   </div>
 </div>
